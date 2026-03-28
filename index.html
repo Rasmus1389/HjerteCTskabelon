@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<!-- saved from url=(0110)file:///C:/Users/syr8ek/Desktop/Kaldaras,%20Mirsa%3B%202307680AM7%3B%202022-5-3%20%2012%3B17%20PM/index991.htm -->
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hjerte-CT skabelon</title>
+<link rel="manifest" href="manifest.json">
+<link rel="icon" type="image/png" href="icon-192.png">
+<script>
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('./service-worker.js');
+  }
+</script>
+
+<style>
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main-content {
+  flex: 1;
+}
+
+.footer {
+  height: 60px; /* or auto if you want it to grow */
+  background-color: #f0f0f0;
+}
+
+body {
+  background-color: rgb(90, 120, 80, 0.2);
+  padding-top: 16px;
+  padding-left: 12px;
+  padding-right: 12px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+input[type=text], select, textarea, input[type=number] {
+  width: 100%;
+  padding: 6px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+label {
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #444;
+  padding: 4px 4px 2px 0;
+  display: inline-block;
+}
+
+input[type=submit] {
+  background-color: #04AA6D;
+  color: white;
+  padding: 3px 3px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: right;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+.container1 {
+  border-radius: 3px;
+  background-color: #f2f2f2;
+  padding: 3px;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -10px;
+}
+
+.col-50 {
+  flex: 50;
+  padding: 0 8px;
+}
+
+
+
+        button {
+            padding: 3px 30px;
+            background-color: light-gray;
+            color: black;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.4s;
+        }
+        button:hover {
+            background-color: gray; /* Light green */
+        }
+
+
+
+
+@media screen and (max-width: 600px) {
+  .col-50, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
+}
+
+
+.collapsible {
+  background-color: rgb(90, 120, 80, 0.2);
+  color: black;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
+
+.active, .collapsible:hover {
+  background-color: rgb(90, 120, 80, 0.2);
+}
+
+.collapsible:after {
+  content: '\002B';
+  color: white;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\2212";
+}
+
+.content {
+  padding: 0 18px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  background-color: rgb(90, 120, 80, 0.2);
+}
+
+</style>
+
+    </head>
+    
+    <body>
+    
+    <h2 id="headline"> Hjerte-CT-skabelon-Beta</h2>
+    <input type="text" id="nameInput" placeholder="Indtast navn eller ID.">
+    <br><br>
+    
+    <input type="text" id="myText25" placeholder="Klinik og Indikation: ">
+  <br><br>
+   
+   <button class="collapsible">Åben sektion I</button>
+<div class="content">
+ 
+    
+<form onsubmit="handleSubmit(event)">
+<div class="row">
+   <div class="col-50">
+    <label for="num1">Kev:  </label>
+    <input type="number" id="num1" required="">
+      </div>
+   <div class="col-50">
+    <label for="num2"> DLP:</label>
+    <input type="number" id="num2" required="">
+      </div>
+   <div class="col-50">
+    <label for="num3">Kontrast ml.</label>
+    <input type="number" id="num3" required="">
+      </div>
+      </div>
+  <div class="row">
+   <div class="col-50">
+    <label for="num4">Seloken iv:</label>
+    <input type="number" id="num4" required="">
+      </div>
+    <div class="col-50">
+    <label for="num5">Puls:</label>
+    <input type="number" id="num5" required="">
+       </div>
+   <div class="col-50">
+    <label for="num6">CA score:</label>
+    <input type="number" id="num6" required="">
+      </div>
+      </div>
+
+    
+</form><br>
+
+
+<p>          </p>
+       
+<input type="text" id="myText1" value="Komplikationer: Nej">
+<input type="text" id="myText2" value="Hvis ja beskriv:">
+<input type="text" id="myText3" value="Bifund beskrevet(radiolog): Ja">
+<input type="text" id="myText4" value="Evt ekstra bifund(kard):">
+<input type="text" id="myText5" value="Andet ...">
+
+
+
+
+
+<p></p><p>          </p><p>
+
+<div class="row">
+   <div class="col-50">
+    <label>Procedurerelateret medicin:</label>
+    <select id="select1">
+        <option value="Procedurerelateret medicin: Nej">Nej.</option>
+        <option value="Procedurerelateret medicin: Ja">Ja.</option>
+        <option value="premium">Premium</option>
+    </select>
+
+</div>
+   <div class="col-50">
+     <label>Hjerterytme:</label>
+    <select id="select2">
+        <option value="Hjerterytme: SR. ">SR. </option>
+        <option value="Hjerterytme: AFli.">AFli</option>
+        <option value="Hjerterytme: Andet.">Andet</option>
+    </select>
+
+ </div>
+ </div>
+    <div class="row">
+      <div class="col-50">
+            <label>CT kvalitet:</label>
+    <select id="select3">
+        <option value="Diagnostisk undersøgelse">Diagnostisk</option>
+        <option value="Delvist diagnostisk undersøgelse">Delvist diagnostisk</option>
+        <option value="Ikke diagnostisk undersøgelse">Ikke diagnostisk</option>
+    </select>
+
+    </div>
+   <div class="col-50">
+    <label>Antal syge kar:</label>
+    <select id="select4">
+        <option value="0 syge kar">Ingen syge kar.</option>
+        <option value="1 sygt kar">1 sygt kar.</option>
+        <option value="2 syge kar">2 syge kar.</option>
+        <option value="3 syge kar">3 syge kar.</option>
+        <option value="Antal syge kar: Diffus sygdom">Diffus sygdom.</option>
+        
+    </select>
+
+    </div>
+      </div>
+     
+     <div class="row">
+      <div class="col-50">
+            <label>Hovedstamme:</label>
+    <select id="select5">
+        <option value="Ingen hovedstammestenose">Ingen LM stenose..</option>
+        <option value="Ubeskyttet hovedstamme.">Ubeskyttet LM </option>
+        <option value="Beskyttet hovedstammestenose.">Beskyttet LM </option>
+    </select>
+
+
+       </div>
+      <div class="col-50">
+    <label>Kardominans:</label>
+    <select id="select6">
+        <option value="Kardominans: Højredominant.">Højredominant.</option>
+        <option value="Kardominans: Venstredominant.">Venstredominant.</option>
+        <option value="Kardominans: Balanceret system.">Balanceret.</option>
+    </select>
+    
+ 
+      </div>
+      </div>
+      
+    <label>Nitroglycerin:</label>
+    <select id="select7">
+        <option value="Nitroglycerin: Ja Nitrolingual 0,4 mikrogram x 2.">Nitro x 2 , 0,4.</option>
+        <option value="Nej ingen nitroglycerin.">Ingen nitroglycerin.</option>
+        <option value="Ja nitroglycerin: Nitrolingual 0,4 en gang.">Nitro 0,4 en gang.</option>
+    </select>
+    
+
+        
+</div>
+
+<button class="collapsible">Åben sektion II</button>
+<div class="content">
+    
+    <h3> Fritekst  </h3>
+    <input type="text" id="myText6" value=" ... ">
+  
+    <p>          </p>
+    <p>          </p>
+    <p>       </p>
+    <h3>Segmenter / Stenose i % / Bogstav:  N= nativ</h3>
+    
+        <form id="inputForm">
+        <div class="row">
+          <div class="col-50">
+            <input type="number" id="num10" placeholder="Segment">
+           </div>
+           <div class="col-50">
+            <input type="number" id="percent10" placeholder="Percentage 10" min="0" max="100">
+            </div>
+           <div class="col-50">
+            <input type="letter" id="letter10" placeholder="Letter" maxlength="1">
+           </div>
+             </div>
+         <div class="row">
+          <div class="col-50">
+            <input type="number" id="num11" placeholder="Segment">
+             </div>
+             <div class="col-50">
+            <input type="number" id="percent11" placeholder="Percentage 11" min="0" max="100">
+            </div>
+             <div class="col-50">
+            <input type="letter" id="letter11" placeholder="Letter" maxlength="1">
+               </div>
+                 </div>
+         <div class="row">
+          <div class="col-50">
+            <input type="number" id="num12" placeholder="Segment">
+              </div>
+           <div class="col-50">
+            <input type="number" id="percent12" placeholder="Percentage 12" min="0" max="100">
+            </div>
+            <div class="col-50">
+            <input type="letter" id="letter12" placeholder="Letter" maxlength="1">
+             </div>
+                </div>
+         <div class="row">
+          <div class="col-50">
+            <input type="number" id="num13" placeholder="Segment">
+               </div>
+            <div class="col-50">
+            <input type="number" id="percent13" placeholder="Percentage 13" min="0" max="100">
+              </div>
+            <div class="col-50">
+            <input type="letter" id="letter13" placeholder="Letter" maxlength="1">
+             </div>
+               </div>
+         <div class="row">
+          <div class="col-50"> 
+            <input type="number" id="num14" placeholder="Segment">
+            </div>
+            <div class="col-50"> 
+            <input type="number" id="percent14" placeholder="Percentage 14" min="0" max="100">
+            </div>
+            <div class="col-50"> 
+            <input type="letter" id="letter14" placeholder="Letter" maxlength="1">
+              </div>
+                 </div>
+         <div class="row">
+          <div class="col-50">
+            <input type="number" id="num15" placeholder="Segment">
+              </div>
+           <div class="col-50">
+            <input type="number" id="percent15" placeholder="Percentage 15" min="0" max="100">
+              </div>
+           <div class="col-50"> 
+            <input type="letter" id="letter15" placeholder="Letter" maxlength="1">
+              </div>
+               </div>
+        
+   
+ 
+
+  
+   
+<h3>Konsekvens - klik: </h3>
+
+<button type="button" onclick="showConsequence('demo7')"> Ingen......</button>
+<button type="button" onclick="showConsequence('demo8')"> Medicin....</button>
+<button type="button" onclick="showConsequence('demo9')"> Perfusion...</button>
+<button type="button" onclick="showConsequence('demo10')"> Andet.....</button>
+<button type="button" onclick="showConsequence('demo11')"> Invasiv....</button>
+<button type="button" onclick="showConsequence('demo12')"> NonInv....</button>
+<button type="button" onclick="showConsequence('demo13')"> CT-FFR....</button>
+<button type="button" onclick="showConsequence(null)" style="background-color:#ffcccb;"> Ryd valg </button>
+
+
+<p><a href=" https://app.heartflow.net/">Link: Heartflow login.</a>
+<a href="
+https://pacsweb.prod.ripa.rsyd.net/archive/">/ Link: Send til heartflow.</a>
+<h3>Konk. og plan / Breve:</h3>
+<select id="mySelect">
+  <option value="HjerteCT uden tegn på betydende coronarsygdom, ej heller betydende atheromatose. Således kan patienten afsluttes pr brev med besked til henvisende læge. ">Ingen behandling.</option>
+  <option value="HjerteCT viser ahteromatose men ingen signifikatnte stenoser i LM, LAD, CX eller RCA. Derfor må behandlingen til en start være medicinsk. Herunder sanering af risikofaktorer, herunder BT, kolesterol etc. Der planlægges en ambulant opfølgende kontrol. ">Medicinsk behandling.</option>
+  <option value="HjerteCT med atheromatose og fund af betydende stenoser svt. en eller flere koronararterier. jnf. beskrivelse ovenfor. På den baggrund planlægges invasiv udredning med KAG. Der sendes notifikation til henv. læge tli orientering.  rp KAG">Invasiv udredning.</option>
+  <option value="Undersøgelsen af hjertet med CT skanning viser velfungerende normalt udseende kranspulsåre. Dvs de kar der forsyner din hjertemuskel. Der er ikke tegn til betydende åreforkalkingsygdom. Således ingen grund til yderligere udredning på nuværende tidspunkt. Videre forløb hos din egen læge hvis nødvendigt. Der er i det omfang det er muligt gået meddelelse til den henvisende læge til orientering.">__Brev: Ingen behandling.</option>
+  <option value="HjerteCT skanningen med henblik på fremstilling af dine kranspulsåre viste nogen åreforkalkning dvs ahteromatose. Dog ikke med omfang eller lokalisaton så såkaldt stentbehandling eller fx by-pass operation er nødvendig. Behandlingen er derfor forebyggende med vægt på behandling af risikofaktorer fx kolesterol og BT, og i nogle tilfælde såkaldt antianginøs medicin medicin, såfremt ubehaget fx brystsmerter, som førte til CT skaningen vurderes at have en årsagssammenhæng. Vi ser dig derfor i ambulatoriet med henblik på medicinjustering og nærmere belysningen af dine symptomer. Der er gået besked til henvisende læge til orientering.">__Brev: Medicinsk behandling.</option>
+  <option value="HjerteCT skanningen med henblik på udredning af evt. sygdom i kranspulsåre, dvs de kar der forsyner hjertemuskler, viser formodet sygdom i et eller flere kar. Dvs. åreforkalkning samt forsnævring, som kan afstedkomme iltmangel og give symptomer. Det er dog vigtigt at understrege af hjerteCT ofte overvurderer graden af sygdom. Vi vil tilbyde dig såkaldt invasiv undersøgelse KAG til fremstilling af kranspulsåre via håndledet eller lysken. Derpå når den præcise udbredelse er kendt evt. med supplerende ekstra målinger, kan man med dig beslutte den bedste behandlng. Som kan være medicin, ballonudvidelse med stent eller i nogle tilfælde by-pass operation. ">__Brev: Invasiv udredning.</option>
+  
+   
+</select>
+
+
+<button type="button" onclick="copyToClipboard(event)">Kopi til clipboard mhp. paste teskstfelt</button>
+
+</p>  
+
+<p> .-. .- ... -- ..- ...&#129339.- .-.. -... .. -. .. ..- ... ... .-. </p>
+
+<p>       </p>
+
+
+  
+ <p>            </p>
+         
+            
+<button type="button" onclick="copyReport()">Kopier tekst nedenfor mhp paste i hjerte-CT beskr. felt- klik </button>
+
+<div id="reportArea">
+    <span id="demo25"></span><br><br>
+    <span> CT cor protokol prospektiv gated. </span><br>
+    <span id="output33"></span><br>
+    <span id="output66"></span> <br> 
+    <span id="output44"></span><br><br>
+    
+    <span> Fritekst: </span>
+    <span id="demo6"></span><br><br>
+    <span>Segmenter / Stenose / Bogstav ( N=nativ)/ Tekst: </span><br><br>
+    <span id="output35"></span><br>
+    <span> Konsekvens: </span>
+    
+    <span id="demo7" style="display:none">Ingen behandling</span>
+    <span id="demo8" style="display:none">Medicinsk behandling</span>
+    <span id="demo9" style="display:none">Perfusionsundersøgelse</span>
+    <span id="demo10" style="display:none">Anden konsekvens ...</span>
+    <span id="demo11" style="display:none">Henvisning til invasiv undersøgelse</span>
+    <span id="demo12" style="display:none">Henvisning til anden non-invasiv undersøgelse</span>
+    <span id="demo13" style="display:none">CT-FFR</span>
+</div>
+
+        
+    
+
+      
+      
+
+        </p>
+     
+  
+   <script>
+   // 1. Samlet opstarts-funktion (Sikrer at både collapsibles og auto-input vågner)
+window.addEventListener('load', function() {
+    initCollapsibles();
+    // Tvinger siden til at læse standardværdier (SR, Nej osv.) med det samme
+    updateAll(); 
+});
+
+// 2. Gør sektioner klikbare
+function initCollapsibles() {
+    var coll = document.getElementsByClassName("collapsible");
+    for (var i = 0; i < coll.length; i++) {
+        coll[i].onclick = function() {
+            this.classList.toggle("active");
+            var content = this.nextElementSibling;
+            if (content.style.maxHeight) {
+                content.style.maxHeight = null;
+            } else {
+                content.style.maxHeight = content.scrollHeight + "px";
+            }
+        };
+    }
+}
+
+// 3. Master-lytter: ALT opdateres live når du taster
+document.addEventListener("input", updateAll);
+
+
+function updateTitle() {
+    const nameInput = document.getElementById("nameInput");
+    const headline = document.getElementById("headline");
+    if (nameInput && headline) {
+        const val = nameInput.value.trim();
+        if (val) {
+            document.title = `CT.${val}.html`;
+            headline.innerText = `CT.${val}.html`;
+        }
+    }
+}
+
+function updateAll() {
+    updateTitle();      
+    myFunction25();     
+    myFunction6();      // <--- TILFØJ DENNE LINJE
+    handleSubmit();     
+    submitAll();        
+    generateOutput();   
+    
+    // Opdater dropdowns
+    const ids = ['select1','select2','select3','select4','select5','select6','select7'];
+    const output = document.getElementById('output44');
+    if (output) {
+        const vals = ids.map(id => document.getElementById(id).value);
+        output.innerHTML = vals.join("<br>");
+    }
+}
+
+
+function handleSubmit() {
+    const v = (id) => parseFloat(document.getElementById(id).value) || 0;
+    const output = document.getElementById('output33');
+    if (output) {
+        output.textContent = `| Kev ${v('num1')} | DLP ${v('num2')} | Kontrast ml ${v('num3')} | Seloken mg ${v('num4')} | Puls ${v('num5')} | CA score ${v('num6')} |`;
+    }
+}
+
+function submitAll() {
+    const f = (id) => document.getElementById(id).value;
+    const output = document.getElementById("output66");
+    if (output) {
+        output.innerHTML = `${f("myText1")} <br> ${f("myText2")} <br> ${f("myText3")} <br> ${f("myText4")} <br> ${f("myText5")}`;
+    }
+}
+
+function generateOutput() {
+    let output = "";
+    for (let i = 10; i <= 15; i++) {
+        let n = document.getElementById("num" + i)?.value;
+        let p = document.getElementById("percent" + i)?.value;
+        let l = document.getElementById("letter" + i)?.value;
+        if (n && p && l) {
+            output += `Segment nr: ${n}, ${p} %, ${l}... ${categorizePercentage(p)}<br>`;
+        }
+    }
+    const out35 = document.getElementById("output35");
+    if (out35) out35.innerHTML = output;
+}
+
+function categorizePercentage(p) {
+    if (p == 100) return "Kronisk lukket kar";
+    if (p >= 90) return "Svær stenose";
+    if (p == 0) return "Normalt kar";
+    if (p == 50) return "Grænsesignifikant stenose";
+    return p >= 51 ? "Stenose" : "Atheromatose";
+}
+
+function showConsequence(id) {
+    for (let i = 7; i <= 13; i++) {
+        document.getElementById('demo' + i).style.display = 'none';
+    }
+    if (id) document.getElementById(id).style.display = 'inline';
+}
+
+function myFunction25() {
+    const val = document.getElementById("myText25").value;
+    document.getElementById("demo25").innerHTML = val;
+}
+
+function myFunction6() {
+    const val = document.getElementById("myText6").value;
+    document.getElementById("demo6").innerHTML = val;
+}
+
+// Kopierer hele rapporten som ren tekst (ingen HTML koder)
+function copyReport() {
+    const reportArea = document.getElementById('reportArea');
+    const textArea = document.createElement("textarea");
+    textArea.value = reportArea.innerText; // Vigtigt: innerText tager kun ren tekst
+    document.body.appendChild(textArea);
+    textArea.select();
+    document.execCommand('copy');
+    document.body.removeChild(textArea);
+    alert("Rapport kopieret!");
+}
+
+// Kopierer den valgte brevtekst fra dropdown-menuen
+function copyToClipboard(event) {
+    if (event) event.preventDefault(); // Forhindrer "File not found" fejl
+    const sel = document.getElementById("mySelect");
+    const text = sel.options[sel.selectedIndex].value;
+    const textArea = document.createElement("textarea");
+    textArea.value = text;
+    document.body.appendChild(textArea);
+    textArea.select();
+    document.execCommand('copy');
+    document.body.removeChild(textArea);
+    alert("Brevtekst kopieret!");
+}
+
+
+</script>
+
+
+
+</body></html>
